@@ -6,7 +6,7 @@ import os
 def ReadList(listNumber):
     try:
         lists = [line for line in open(
-            "List_" + (str)(listNumber) + ".md", encoding="utf8")]
+            "list/List_" + (str)(listNumber) + ".md", encoding="utf8")]
     except FileNotFoundError:
         print('List not found!')
         exit(0)
