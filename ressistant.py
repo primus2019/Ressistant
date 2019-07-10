@@ -2,7 +2,8 @@ import time
 import random
 import sys
 import os
-import Ressistant.commands
+import Ressistant.commands.Commands as Commands
+
 
 def ReadList(listNumber):
     try:
@@ -118,7 +119,7 @@ def SumByEN(listNo, ENList, log):
 
 def main(argv):
     if argv[1:] != []:
-        commands.hello(argv[1:])
+        Commands.hello(argv[1:])
         return
     listNo = ChooseList()
     print('Loading...\n')
