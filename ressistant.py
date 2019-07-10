@@ -2,7 +2,7 @@ import time
 import random
 import sys
 import os
-import Ressistant.commands.Commands as Commands
+import Commands
 
 
 def ReadList(listNumber):

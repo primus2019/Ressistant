@@ -1,7 +1,7 @@
 import os
 
 
-class commands:
+class Commands:
     def resetLog(listNo):
         os.remove('log/List_' + str(listNo) + '.log')
 
