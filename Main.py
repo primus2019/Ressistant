@@ -91,8 +91,9 @@ def ChooseList():
 
 def ReadLog(listNo, ENList):
     fileName = 'log/List_' + (str)(listNo) + '.log'
-    if not os.path.isfile(fileName):
+    if not os.path.isdir('log'):
         os.mkdir('log')
+    if not os.path.isfile(fileName):
         with open(fileName, 'a+') as log:
             for word in ENList:
                 log.write((str)(0) + ' ')
