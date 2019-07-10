@@ -1,7 +1,8 @@
 import time
 import random
+import sys
 import os
-
+import Ressistant.commands
 
 def ReadList(listNumber):
     try:
@@ -115,14 +116,21 @@ def SumByEN(listNo, ENList, log):
         print((str)(ENList[cnt][1][1:]) + ': ' + '{:.1%}'.format(rate))
 
 
+def main(argv):
+    if argv[1:] != []:
+        commands.hello(argv[1:])
+        return
+    listNo = ChooseList()
+    print('Loading...\n')
+    list = ReadList(listNo)
+    ENList = ENList(list)
+    CNList = CNList(list)
+    log = ReadLog(listNo, ENList)
+    TestByCN(listNo, ENList, CNList, log)
+    SumByEN(listNo, ENList, log)
+    log.close()
+    EndTest()
 
-listNo = ChooseList()
-print('Loading...\n')
-list = ReadList(listNo)
-ENList = ENList(list)
-CNList = CNList(list)
-log = ReadLog(listNo, ENList)
-TestByCN(listNo, ENList, CNList, log)
-SumByEN(listNo, ENList, log)
-log.close()
-EndTest()
+
+if __name__ == '__main__':
+    main(sys.argv)
