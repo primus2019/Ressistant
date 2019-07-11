@@ -16,7 +16,6 @@ def hello(argv):
             print('exit reset mode without changing anything...')
     elif argv[0] == '-c':
         if os.path.isfile('log/List_' + argv[1] + '.log'):
-            temp = ''
             with open('log/List_' + argv[1] + '.log', 'r') as log:
                 print('Correction: ' + log.readline()[:-1])
                 print('Count: ' + log.readline()[:-1])
