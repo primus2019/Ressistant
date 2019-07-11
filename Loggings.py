@@ -7,11 +7,7 @@ def ReadLog(listNo, ENList):
         os.mkdir('log')
     if not os.path.isfile(fileName):
         with open(fileName, 'a+') as log:
-            for word in ENList:
-                log.write((str)(0) + ' ')
-            log.write('\n')
-            for word in ENList:
-                log.write((str)(0) + ' ')
+            log.write((str(0) + ' ') * len(ENList) + '\n' + (str(0) + ' ') * len(ENList))
     return open(fileName, 'a+')
 
 
