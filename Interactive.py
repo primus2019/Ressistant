@@ -29,10 +29,17 @@ def TestByCN(listNo, ENList, CNList, log):
             for cnt, word in enumerate(ENList):
                 print((str)(cnt + 1) + word[1], end=' ')
             print('\nYour answer is: ', end='')
-            if (int)(input()) == mngs[0]:
+            answer = input()
+            while not answer.isnumeric():
+                print('Enter the numeric options above, or enter "999" to exit.\nYour answer is: ')
+                answer = input()
+            if int(answer) == mngs[0]:
                 print('Great.\n')
                 correction[mngs[0] - 1] += 1
                 histories[mngs[0] - 1] += 1
+            elif answer == '999':
+                print('manually exit')
+                exit(0)
             else:
                 print('Right answer: ' + (str)
                       (mngs[0]) + ENList[mngs[0] - 1][1] + '\n')
