@@ -7,17 +7,16 @@ def ReadLog(listNo, ENList):
         os.mkdir('log')
     if not os.path.isfile(fileName):
         with open(fileName, 'a+') as log:
-            log.write((str(0) + ' ') * len(ENList) + '\n' + (str(0) + ' ') * len(ENList))
+            log.write((str(0) + ' ') * len(ENList) +
+                      '\n' + (str(0) + ' ') * len(ENList))
     return open(fileName, 'a+')
 
 
 def SumByEN(listNo, ENList, log):
     log.seek(0, 0)
-    correction = [(int)(record)
-                  for record in log.readline()[:-1] if record != ' ']
+    correction = [(int)(record) for record in log.readline()[:-1] if record != ' ']
     # print(correction)
-    histories = [(int)(record)
-                 for record in log.readline()[:-1] if record != ' ']
+    histories  = [(int)(record) for record in log.readline()[:-1] if record != ' ']
     # print(histories)
     print('Summary of list ' + (str)(listNo))
     correction = [correction[i] / histories[i] for i in range(len(correction))]

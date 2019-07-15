@@ -46,7 +46,7 @@ def TestByCN(listNo, ENList, CNList, log):
                 histories[mngs[0] - 1] += 1
             Loadings.showUsage()
             time.sleep(0.5)
-    log.seek(0)
+    log.seek(0,0)
     log.truncate()
     for record in correction:
         if record != ' ':
