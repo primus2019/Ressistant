@@ -1,3 +1,7 @@
+import sys
+sys.path.append('.')
+
+
 def showUsage():
     pass
 
@@ -5,7 +9,7 @@ def showUsage():
 def ReadList(listNumber):
     try:
         lists = [line for line in open(
-            "list/List_" + (str)(listNumber) + ".md", encoding="utf8")]
+            "/list/List_" + str(listNumber) + ".md", encoding="utf8")]
     except FileNotFoundError:
         print('List ' + str(listNumber) + ' not found!')
         exit(0)

@@ -1,6 +1,10 @@
+import sys
+sys.path.append('.')
+
+
 import random
 import time
-import Loadings
+from ressistant.launch.Loadings import showUsage
 
 
 def EndTest():
@@ -44,7 +48,7 @@ def TestByCN(listNo, ENList, CNList, log):
                 print('Right answer: ' + (str)
                       (mngs[0]) + ENList[mngs[0] - 1][1] + '\n')
                 histories[mngs[0] - 1] += 1
-            Loadings.showUsage()
+            showUsage()
             time.sleep(0.5)
     log.seek(0,0)
     log.truncate()
