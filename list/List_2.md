@@ -26,7 +26,7 @@
 
 - abrade
 
-**磨损，精神上折磨** to rub or wear away wapecially by friction; wear down spiritually
+**磨损，精神上折磨** to rub or wear away especially by friction; wear down spiritually
 
 - abridge
 
